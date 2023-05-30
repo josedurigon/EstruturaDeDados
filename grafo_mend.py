@@ -14,38 +14,53 @@ grafo[node3["cidade"]] = node3
 #aqui o DICIONARIO grafo recebe os dicionarios NODE e os armazena pelo nome da cidade (pela chave cidade no caso).
 #Como os dados de relação somente fazem sentido em uma relação, cria-se portanto uma lista (vetor mesmo) para armazenar esses dados.
 
-lista.append(("A", "B", {"tempo": 5, "consumo_medio": 3, "distancia": 10, "velocidade_media": 60}))
-lista.append(("A", "C", {"tempo": 7, "consumo_medio": 4, "distancia": 12, "velocidade_media": 55}))
+lista.append({"origem": "A", "destino": "B", "dados": {"tempo": 5, "consumo_medio": 3, "distancia": 10, "velocidade_media": 60}}) #correto
+lista.append({"origem": "A", "destino": "C", "dados": {"tempo": 7, "consumo_medio": 4, "distancia": 12, "velocidade_media": 55}}) #correto
 
 
 def addGrafo(cidade, tempo, distancia, consumo_medio, velocidade_media):
-    grafo = {
+    novo_no = {
         "cidade":cidade,
         "tempo":tempo,
         "distancia":distancia,
         "consumo_medio":consumo_medio,
         "velocidade_media": velocidade_media
     }
-    lista.append(grafo)
+    lista.append(novo_no)
+    print("*** Adicionado ***")
+    
+    
 
 
 def infoGrafo(grafo, no):
     node = grafo[no]
-    print("Nó: ", no["cidade"])
-    print("Tempo", no["tempo"])
-    print("consumo medio", no["consumo_medio"])
-    print("Distancia", no["distancia"])
-    print("Velocidade media", no["velocidade_media"])
-
+    print("Nó: ", node["cidade"])
+    print("Tempo", node["tempo"])
+    print("consumo medio", node["consumo_medio"])
+    print("Distancia", node["distancia"])
+    print("Velocidade media", node["velocidade_media"])
 
 def imprimir_nos_adjacentes(grafo, lista, no):
     for conexao in lista:
-        if conexao[0] == no:
-            proximo_no = grafo[conexao[1]]
-            print("Nó Adjacente:", proximo_no["nome"])
-            print("Tempo:", conexao[2]["tempo"])
+        if isinstance(conexao, dict) and "origem" in conexao and conexao["origem"] == no:
+            proximo_no = grafo.get(conexao.get("destino"))
+            if proximo_no:
+                print("Nó Adjacente:", proximo_no["cidade"])
+                print("Tempo:", conexao["dados"]["tempo"])
 
 
+'''
+def imprimir_nos_adjacentes(grafo, lista, no):
+    for conexao in lista:
+        if "origem" in conexao and conexao["origem"] == no:
+            destino = conexao.get("destino")
+            if destino in grafo:
+                proximo_no = grafo[destino]
+                print("Nó Adjacente:", proximo_no["cidade"])
+                print("Tempo:", conexao["dados"]["tempo"])
+
+'''
+'''
 def depth_first_search(grafo, no_inicial):
     visitados = set()
     pilha = [no_inicial]
@@ -61,4 +76,34 @@ def depth_first_search(grafo, no_inicial):
             for vizinho in vizinhos:
                 if vizinhos not in visitados:
                     pilha.append(vizinho)
+
+
+'''
+def depth_first_search(grafo, no_inicial):
+    visitados = set()
+    pilha = [no_inicial]
+    while pilha:
+        no = pilha.pop()
+
+        if no not in visitados:
+            visitados.add(no)
+            print(f"Visitando nó: {no}")
+
+            vizinhos = grafo[no]
+
+            for vizinho in vizinhos:
+                if vizinho not in visitados:
+                    pilha.append(vizinho)
+
+#testes abaixo
+
+addGrafo("D", 12, 18, 7, 55)
+addGrafo("E", 9, 30, 6, 45)
+
+infoGrafo(grafo, "A")
+print("\n\n",lista,"\n\n")
+imprimir_nos_adjacentes(grafo, lista, "A")
+depth_first_search(grafo, "A")
+
+
 
