@@ -89,7 +89,7 @@ def depth_first_search(grafo, no_inicial):
             visitados.add(no)
             print(f"Visitando nó: {no}")
 
-            vizinhos = grafo[no]
+            vizinhos = grafo[no] #!!!
 
             for vizinho in vizinhos:
                 if vizinho not in visitados:
@@ -101,9 +101,10 @@ addGrafo("D", 12, 18, 7, 55)
 addGrafo("E", 9, 30, 6, 45)
 
 infoGrafo(grafo, "A")
-print("\n\n",lista,"\n\n")
+#print("\n\n",lista,"\n\n")
+#print("\n\n grafo:", grafo,"\n\n")
 imprimir_nos_adjacentes(grafo, lista, "A")
-depth_first_search(grafo, "A")
+#depth_first_search(grafo, "A")
 
 
 
