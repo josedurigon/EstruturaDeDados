@@ -36,23 +36,24 @@ index_to_vertex={
     9:'J',
     10:'K'
 }
-'''
+
+#'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1
 adj_matrix = [
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0]
+                                #1                                                      2                                                                   3                                                               4                                                           5                                                           6                                                               7                                                           8                                                           9                                                           10
+    [[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #1
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #2
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #3
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #4
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #5
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #6
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #7
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #8
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}]], #9
+    [[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':1,'distancia':1,'consumo':1,'velocidade_media':1}],[{'tempo':0,'distancia':0,'consumo':0,'velocidade_media':0}]]  #10
 ]
-'''
 
 
-'''
+
 def DFS (graph, source):    
     stack =[source]
     visited = set()
@@ -65,6 +66,8 @@ def DFS (graph, source):
                     for neighbor in graph[current]:
                         stack.append(neighbor)
                         visited.add(current)
+
+
 '''
 def DFS(graph, adj_matrix, source):
     stack = [source]
@@ -83,33 +86,12 @@ def DFS(graph, adj_matrix, source):
                     if property_value:
                         print(f"Propriedade: {property_value}")
                     stack.append(neighbor)
-
-
-
-
-
-
-#print(graph['A'][1])
-
-# Definindo os vértices do grafo
-vertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K']
-
-# Criando a matriz de adjacência preenchida com listas vazias
-adj_matrix = [[] for _ in range(len(vertices))]
-
-# Adicionando as propriedades de relacionamento à matriz de adjacência
-adj_matrix[0] = [
-    (1, 'TEMPO'), (2, 'CONSUMO_MEDIO'), (5, 'DISTANCIA'), (8, 'VELOCIDADE_MEDIA')
-]
-adj_matrix[1] = [(3, 'TEMPO'), (6, 'CONSUMO_MEDIO'), (9, 'DISTANCIA'),(10, 'VELOCIDADE_MEDIA')]
-adj_matrix[2] = [(4, 'TEMPO'), (7, 'CONSUMO_MEDIO'), (10, 'DISTANCIA'),(11, 'VELOCIDADE_MEDIA')]
-
-# Imprimindo a matriz de adjacência
 '''
+
+
 for row in adj_matrix:
     print(row)
-'''
 
 
 
-DFS(graph, adj_matrix, 'A')
+
